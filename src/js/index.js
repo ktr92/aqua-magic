@@ -1,5 +1,66 @@
 $(document).ready(function () {
-              new WOW().init();
+  new WOW().init();
+
+  const swiper = new Swiper('.swiper-team', {
+    // Optional parameters
+    loop: false,
+    slidesPerView: 4,
+    spaceBetween: 22,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      420: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
+  });
+  /* $('.js-teamslider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    fade: false,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+    ]
+  })
+
+  $(".sliderarrow__right").click(function (e) {
+    $(this).parent().parent().find(".slick-slider").slick("slickNext");
+  });
+  $(".sliderarrow__left").click(function (e) {
+    $(this).parent().parent().find(".slick-slider").slick("slickPrev");
+  }); */
+
 });
 
 $(document).ready(function () {
@@ -48,58 +109,3 @@ $(document).ready(function () {
 
 
 })
-
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-          center: [55.748154, 37.540236],
-          zoom: 11
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
-
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: '',
-          balloonContent: ''
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/mapmark.svg',
-          // Размеры метки.
-          iconImageSize: [47, 54],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      }),
-
-      myPlacemarkWithContent = new ymaps.Placemark([55.832262, 37.450989], {
-          hintContent: '',
-          balloonContent: '',
-          iconContent: ''
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#imageWithContent',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/mapmark.svg',
-          // Размеры метки.
-          iconImageSize: [47, 54],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-24, -24],
-          // Смещение слоя с содержимым относительно слоя с картинкой.
-          iconContentOffset: [15, 15],
-          // Макет содержимого.
-          iconContentLayout: MyIconContentLayout
-      });
-
-  myMap.geoObjects
-      .add(myPlacemark)
-      .add(myPlacemarkWithContent);
-});
