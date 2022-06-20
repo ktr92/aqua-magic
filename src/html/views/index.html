@@ -1,0 +1,239 @@
+<% var data = {
+  title: "Главная | ALL AGENCY",
+  author: ""
+}; %>
+<%= _.template(require('../includes/head.html').default)(data) %>
+
+<!-- класс для хедера на главной, который отличается от внутренних -->
+<div class="indexpage">
+  <%= _.template(require('../includes/header.html').default)(data) %>
+  <div class="mainblock">
+    <div class="container">
+      <div class="mainblock__content">
+        <div class="mainblock__title imgtitle">
+          <h1>Индивидуальные занятия плаванием для детей от 0 до 13 лет</h1>
+        </div><!-- /.mainblock__title -->
+        <div class="mainblock__text">
+          Мы не просто учим плавать - мы закладываем основу здорового, всестороннего развития детей разного возраста!
+        </div><!-- /.mainblock__text -->
+        <div class="mainblock__button"><a
+            href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+            target='_blank' class='button'>Записаться</a></div>
+        <!-- /.mainblock__button -->
+      </div><!-- /.mainblock__content -->
+    </div><!-- /.container -->
+  </div><!-- /.mainblock -->
+</div><!-- /.indexpage -->
+
+<div class="iconsblock">
+  <div class="container">
+    <div class="colstitle">
+      <div class="colstitle__col">
+        <div class="imgtitle imgtitle_h2 colstitle__title">
+          <h2>Безопасность вашего ребенка - наш приоритет</h2>
+        </div>
+      </div><!-- /.colstitle__col -->
+
+      <div class="colstitle__col">
+        <div class="colstitle__text">
+          <p>Наш приоритет - забота о безопасности и здоровье ваших деток. Поэтому одна из важнейших сторон работы
+            аквацентра - очистка воды.</p>
+
+          <p> Наш бассейн оснащен современной многоступенчатой системой очистки. Она полностью автоматизирована и
+            позволяет максимально снизить содержание в воде химии, уничтожать вирусы и бактерии, а также приближает воду
+            к
+            качеству питьевой.</p>
+        </div><!-- /.colstitle__text -->
+      </div><!-- /.colstitle__col -->
+    </div><!-- /.colstitle -->
+
+    <div class="iconsblock__wrapper">
+      <div class="iconsblock__title">Мы используем</div><!-- /.iconsblock__title -->
+      <div class="iconsblock__items">
+        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="0.5s">
+          <div class="iconsblock__one">
+            <div class="iconsblock__icon">
+              <div class="iconsblock__image">
+                <div class="iconsblock__img">
+                  <img src="img/iconsblock1.svg" alt="">
+                </div>
+              </div><!-- /.iconsblock__image -->
+              <div class="iconsblock__name">Мощнейшие <br>
+                фильтры очистки</div>
+            </div><!-- /.iconsblock__icon -->
+          </div><!-- /.iconsblock__one -->
+        </div><!-- /.iconsblock__item -->
+        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="1s">
+          <div class="iconsblock__one">
+            <div class="iconsblock__icon">
+              <div class="iconsblock__image">
+                <div class="iconsblock__img">
+                  <img src="img/longright.svg" alt="">
+                </div>
+              </div><!-- /.iconsblock__image -->
+
+            </div><!-- /.iconsblock__icon -->
+          </div><!-- /.iconsblock__one -->
+        </div><!-- /.iconsblock__item -->
+        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="1.5s">
+          <div class="iconsblock__one">
+            <div class="iconsblock__icon">
+              <div class="iconsblock__image">
+                <div class="iconsblock__img">
+                  <img src="img/iconsblock2.svg" alt="">
+                </div>
+              </div><!-- /.iconsblock__image -->
+              <div class="iconsblock__name">Новейшие станции дозации <br>
+                гипохлорита натрия</div>
+            </div><!-- /.iconsblock__icon -->
+          </div><!-- /.iconsblock__one -->
+        </div><!-- /.iconsblock__item -->
+        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="2s">
+          <div class="iconsblock__one">
+            <div class="iconsblock__icon">
+              <div class="iconsblock__image">
+                <div class="iconsblock__img">
+                  <img src="img/longright.svg" alt="">
+                </div>
+              </div><!-- /.iconsblock__image -->
+
+            </div><!-- /.iconsblock__icon -->
+          </div><!-- /.iconsblock__one -->
+        </div><!-- /.iconsblock__item -->
+        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="2.5s">
+          <div class="iconsblock__one">
+            <div class="iconsblock__icon">
+              <div class="iconsblock__image">
+                <div class="iconsblock__img">
+                  <img src="img/iconsblock3.svg" alt="">
+                </div>
+              </div><!-- /.iconsblock__image -->
+              <div class="iconsblock__name">Ультрафилетовые установки <br>
+                для нехимической бактерицидной
+                обработки воды</div>
+            </div><!-- /.iconsblock__icon -->
+          </div><!-- /.iconsblock__one -->
+        </div><!-- /.iconsblock__item -->
+      </div><!-- /.iconsblock__items -->
+    </div><!-- /.iconsblock__wrapper -->
+
+    <div class="info">
+      <div class="info__wrapper">
+        <div class="info__icon">
+          <div class="info__image">
+            <div class="info__img">
+              <img src="img/timer.svg" alt="">
+            </div><!-- /.info__img -->
+          </div><!-- /.info__image -->
+        </div><!-- /.info__icon -->
+        <div class="info__content">
+          <div class="info__title">Каждые 40 минут весь объем воды проходит полный цикл очистки. </div>
+          <!-- /.info__title -->
+          <div class="info__text">Контроль качества воды проводится каждые 4 часа. Дезинфекция проводится строго по
+            СанПиН РФ. После такой очистки вода абсолютно безопасна для детей </div><!-- /.info__text -->
+        </div><!-- /.info__content -->
+      </div><!-- /.info__wrapper -->
+    </div><!-- /.info -->
+
+  </div><!-- /.container -->
+</div><!-- /.iconsblock -->
+
+
+<div class="fitchesblock">
+  <div class="container">
+    <div class="colstitle">
+      <div class="colstitle__col">
+        <div class="imgtitle imgtitle_h2 colstitle__title">
+          <h2>Преимущества</h2>
+        </div>
+      </div><!-- /.colstitle__col -->
+    </div><!-- /.colstitle -->
+    <div class="fitchesblock__cols">
+      <div class="fitchesblock__col fitchesblock__col_fitches">
+        <div class="fitches__item">
+          <div class="fitches" style='transform: rotate(10deg); padding-bottom: 30px'>
+            <div class="fitches__wrapper">
+              <div class="fitches__icon">
+                <div class="fitches__image">
+                  <div class="fitches__img"><img src="img/fitches1.svg" alt=""></div><!-- /.fitches__img -->
+                </div><!-- /.fitches__image -->
+              </div><!-- /.fitches__icon -->
+              <div class="fitches__text">Отдельный бассейн для вашего ребенка</div><!-- /.fitches__text -->
+            </div><!-- /.fitches__wrapper -->
+          </div><!-- /.fitches -->
+        </div><!-- /.fitches__item -->
+        <div class="fitches__item">
+          <div class="fitches">
+            <div class="fitches__wrapper">
+              <div class="fitches__icon">
+                <div class="fitches__image">
+                  <div class="fitches__img"><img src="img/fitches2.svg" alt=""></div><!-- /.fitches__img -->
+                </div><!-- /.fitches__image -->
+              </div><!-- /.fitches__icon -->
+              <div class="fitches__text">Полностью индивидуальные занятия</div><!-- /.fitches__text -->
+            </div><!-- /.fitches__wrapper -->
+          </div><!-- /.fitches -->
+        </div><!-- /.fitches__item -->
+        <div class="fitches__item">
+          <div class="fitches" style='transform: rotate(-10deg); ; padding-top: 30px''>
+            <div class="fitches__wrapper">
+              <div class="fitches__icon">
+                <div class="fitches__image">
+                  <div class="fitches__img"><img src="img/fitches3.svg" alt=""></div><!-- /.fitches__img -->
+                </div><!-- /.fitches__image -->
+              </div><!-- /.fitches__icon -->
+              <div class="fitches__text">Сильный состав тренеров</div><!-- /.fitches__text -->
+            </div><!-- /.fitches__wrapper -->
+          </div><!-- /.fitches -->
+        </div><!-- /.fitches__item -->
+      </div><!-- /.fitchesblock__col -->
+      <div class="fitchesblock__col fitchesblock__col_image">
+        <div class="fitchesblock__bg">
+          <div class="fitchesblock__img"><img src="img/fitchesblock.svg" alt=""></div><!-- /.fitchesblock__img -->
+        </div><!-- /.fitchesblock__bg -->
+      </div><!-- /.fitchesblock__col -->
+      <div class="fitchesblock__col fitchesblock__col_fitches">
+        <div class="fitches__item">
+          <div class="fitches" style=' transform: rotate(10deg); padding-bottom: 30px'>
+            <div class="fitches__wrapper">
+              <div class="fitches__icon">
+                <div class="fitches__image">
+                  <div class="fitches__img"><img src="img/fitches4.svg" alt=""></div><!-- /.fitches__img -->
+                </div><!-- /.fitches__image -->
+              </div><!-- /.fitches__icon -->
+              <div class="fitches__text">Теплая и чистая вода</div><!-- /.fitches__text -->
+            </div><!-- /.fitches__wrapper -->
+          </div><!-- /.fitches -->
+        </div><!-- /.fitches__item -->
+        <div class="fitches__item">
+          <div class="fitches">
+            <div class="fitches__wrapper">
+              <div class="fitches__icon">
+                <div class="fitches__image">
+                  <div class="fitches__img"><img src="img/fitches5.svg" alt=""></div><!-- /.fitches__img -->
+                </div><!-- /.fitches__image -->
+              </div><!-- /.fitches__icon -->
+              <div class="fitches__text">Отсутствие необходимости родителю заходить в воду</div><!-- /.fitches__text -->
+            </div><!-- /.fitches__wrapper -->
+          </div><!-- /.fitches -->
+        </div><!-- /.fitches__item -->
+        <div class="fitches__item">
+          <div class="fitches" style='transform: rotate(-10deg); ; padding-top: 30px''>
+            <div class="fitches__wrapper">
+              <div class="fitches__icon">
+                <div class="fitches__image">
+                  <div class="fitches__img"><img src="img/fitches6.svg" alt=""></div><!-- /.fitches__img -->
+                </div><!-- /.fitches__image -->
+              </div><!-- /.fitches__icon -->
+              <div class="fitches__text">Еще не придумали - жду</div><!-- /.fitches__text -->
+            </div><!-- /.fitches__wrapper -->
+          </div><!-- /.fitches -->
+        </div><!-- /.fitches__item -->
+      </div><!-- /.fitchesblock__col -->
+    </div><!-- /.fitchesblock__cols -->
+  </div><!-- /.container -->
+</div><!-- /.fitcheblock -->
+
+
+
+<%= _.template(require('../includes/footer.html').default)(data) %>
