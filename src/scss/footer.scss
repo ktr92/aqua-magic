@@ -1,20 +1,108 @@
 @import './partials/params.scss';
 @import './partials/mixins.scss';
+
 #footer {
-  background: #212121;
+  background-image: url(../img/footer.png);
+  background-size: cover;
+  background-position: center bottom;
+
 }
+
 .footer__main {
 
-  padding: 60px 0 43px 0; 
+  padding: 315px 0 113px 0;
 }
+
 .footer__cols {
   display: flex;
   justify-content: space-between;
   margin: 0 -15px;
+  align-items: center;
 }
+
 .footer__col {
   padding: 0 15px;
-  
+
+}
+
+.footer__info {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copy {
+  padding-left: 42px;
+  margin-left: 34px;
+  position: relative;
+
+  &:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.footer__text {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #FFFFFF;
+}
+
+.footer__link {
+  position: relative;
+  padding-left: 42px;
+  margin-left: 34px;
+
+  &:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 
+
+.footer__link:first-child {
+  padding-left: 0;
+  margin-left: 0;
+
+  &:after {
+    display: none;
+  }
+}
+
+.footer__link a {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  text-decoration: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  ;
+  color: #FFFFFF;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+
+.footer__links {
+  display: flex;
+  align-items: center;
+}

@@ -1,65 +1,51 @@
 $(document).ready(function () {
   new WOW().init();
 
-  const swiper = new Swiper('.swiper-team', {
-    // Optional parameters
-    loop: false,
-    slidesPerView: 4,
-    spaceBetween: 22,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      420: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 40
-      }
-    }
-  });
-  /* $('.js-teamslider').slick({
-    infinite: true,
+  $('.sliderblock__team').slick({
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
-    arrows: false,
     dots: false,
-    fade: false,
-    responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-    ]
-  })
-
-  $(".sliderarrow__right").click(function (e) {
-    $(this).parent().parent().find(".slick-slider").slick("slickNext");
+    nextArrow: $(".swiper-team-button-next"),
+    prevArrow: $(".swiper-team-button-prev"),
   });
-  $(".sliderarrow__left").click(function (e) {
-    $(this).parent().parent().find(".slick-slider").slick("slickPrev");
-  }); */
+
+
+  var swiper = new Swiper('.gallery__container', {  
+    slidesPerView: 4,
+    spaceBetween: 30,
+    speed: 5000,
+    loop: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true
+    },
+    /* autoplay: {
+      delay: 0,
+      disableOnInteraction: false 
+    } */
+  });
+
+  $('.sliderblock__slider-review').slick({
+    infinite: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: false,
+    nextArrow: $(this).find(".arrowRight"),
+    prevArrow: $(this).find(".arrowLeft"),
+  });
+
+
+  $('.accordeon-titlejs').click(function (event) {
+	/* 	$(this).closest('.accordeon-js').find('.accordeon-contentjs').not($(this).next()).hide(300).removeClass('active');
+		$(this).closest('.accordeon-js').find('.accordeon-titlejs').not($(this)).removeClass('active'); */
+		$(this).toggleClass('active');
+		/* $([document.documentElement, document.body]).animate({
+			scrollTop: $(this).offset().top
+		}, 400);*/
+		$(this).next('.accordeon-contentjs').slideToggle();
+	});
+
 
 });
 
