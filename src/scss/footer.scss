@@ -5,6 +5,7 @@
   background-image: url(../img/footer.png);
   background-size: cover;
   background-position: center bottom;
+  background-repeat: no-repeat;
 
 }
 
@@ -97,7 +98,16 @@
   color: #FFFFFF;
 
   &:hover {
-    border-bottom: none;
+    color: #FF8806;
+    border-bottom: 3px solid #FF8806;
+    ;
+  }
+
+  &:focus {
+    color: #FF8806;
+    border-bottom: 3px solid #FF8806;
+    ;
+    opacity: 0.5;
   }
 }
 
@@ -105,4 +115,8 @@
 .footer__links {
   display: flex;
   align-items: center;
+}
+
+.iconsblock__items {
+  padding-left: 30px;
 }

@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
   <link rel="stylesheet" href="css/style.bundle.css" />
   <title>Главная | ALL AGENCY</title>
 </head>
@@ -22,37 +24,45 @@
 <!-- класс для хедера на главной, который отличается от внутренних -->
 <div class="indexpage">
   <header id="header" class="header">
-  <div class="container">
+  <div class="container" id='top'>
     <div class="header__wrapper">
       <div class="header__row">
         <div class="header__item">
           <div class="header__logo"><img src="img/logo.svg" alt=""></div>
         </div><!-- /.header__item -->
-        <div class="header__item">
+        <div class="header__item header__item_mobile">
+          <div class="menu js-menu">
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+          </div>
+        </div><!-- /.header__item -->
+        <div class="header__item desktop">
           <div class="header__menu">
             <div class="mainmenu">
               <ul>
-                <li><a href="">О нас</a></li>
-                <li><a href="">Услуги и цены</a></li>
-                <li><a href="">Специалисты</a></li>
-                <li><a href="">Отзывы</a></li>
-                <li><a href="">Вопрос-ответ</a></li>
-                <li><a href="">Контакты</a></li>
+                <li><a href="#about" class='scrollTo'>О нас</a></li>
+                <li><a href="#price" class='scrollTo'>Услуги и цены</a></li>
+                <li><a href="#team" class='scrollTo'>Специалисты</a></li>
+                <li><a href="#review" class='scrollTo'>Отзывы</a></li>
+                <li><a href="#faq" class='scrollTo'>Вопрос-ответ</a></li>
+                <li><a href="#contact" class='scrollTo'>Контакты</a></li>
               </ul>
             </div><!-- /.mainmenu -->
           </div><!-- /.header__menu -->
         </div><!-- /.header__item -->
-        <div class="header__item">
+        <div class="header__item desktop">
           <div class="header__phone">
-            <div class="phone"><a href="tel:879858664447">+7 985 866 44 47</a></div><!-- /.phone -->
-            <div class="callback"><a href="#">Получить консультацию</a></div><!-- /.callback -->
+            <div class="phone"><a href="tel:879858664447" class='link-white'>+7 985 866 44 47</a></div><!-- /.phone -->
+            <div class="callback link-white"><a target="_blank"
+                href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!">Получить
+                консультацию</a></div><!-- /.callback -->
           </div><!-- /.header__phone -->
         </div><!-- /.header__item -->
       </div><!-- /.header__row -->
     </div>
   </div><!-- /.container -->
 </header><!-- /#header.header -->
-
   <div class="mainblock">
     <div class="container">
       <div class="mainblock__content">
@@ -62,7 +72,7 @@
         <div class="mainblock__text">
           Мы не просто учим плавать - мы закладываем основу здорового, всестороннего развития детей разного возраста!
         </div><!-- /.mainblock__text -->
-        <div class="mainblock__button"><a
+        <div class="mainblock__button"><a target="_blank"
             href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
             target='_blank' class='button'>Записаться</a></div>
         <!-- /.mainblock__button -->
@@ -71,7 +81,7 @@
   </div><!-- /.mainblock -->
 </div><!-- /.indexpage -->
 
-<div class="iconsblock">
+<div class="iconsblock" id='about'>
   <div class="container">
     <div class="colstitle">
       <div class="colstitle__col">
@@ -96,12 +106,14 @@
     <div class="iconsblock__wrapper">
       <div class="iconsblock__title">Мы используем</div><!-- /.iconsblock__title -->
       <div class="iconsblock__items">
-        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="0.5s">
+        <div class="iconsblock__item iconsblock__item_primary animate__animated animate__fadeInUp wow"
+          data-wow-delay="0.5s">
           <div class="iconsblock__one">
             <div class="iconsblock__icon">
               <div class="iconsblock__image">
                 <div class="iconsblock__img">
-                  <img src="img/iconsblock1.svg" alt="">
+                  <img src="img/iconsblock1.svg" alt="" class='iconsblock__mainicon'>
+                  <img src="img/iconsblock1_after.svg" alt="" class='iconsblock__number'>
                 </div>
               </div><!-- /.iconsblock__image -->
               <div class="iconsblock__name">Мощнейшие <br>
@@ -109,7 +121,8 @@
             </div><!-- /.iconsblock__icon -->
           </div><!-- /.iconsblock__one -->
         </div><!-- /.iconsblock__item -->
-        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="1s">
+        <div class="iconsblock__item iconsblock__item_default animate__animated animate__fadeInUp wow"
+          data-wow-delay="1s">
           <div class="iconsblock__one">
             <div class="iconsblock__icon">
               <div class="iconsblock__image">
@@ -121,12 +134,14 @@
             </div><!-- /.iconsblock__icon -->
           </div><!-- /.iconsblock__one -->
         </div><!-- /.iconsblock__item -->
-        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="1.5s">
+        <div class="iconsblock__item iconsblock__item_primary animate__animated animate__fadeInUp wow"
+          data-wow-delay="1.5s">
           <div class="iconsblock__one">
             <div class="iconsblock__icon">
               <div class="iconsblock__image">
                 <div class="iconsblock__img">
-                  <img src="img/iconsblock2.svg" alt="">
+                  <img src="img/iconsblock2.svg" alt="" class='iconsblock__mainicon'>
+                  <img src="img/iconsblock2_after.svg" alt="" class='iconsblock__number'>
                 </div>
               </div><!-- /.iconsblock__image -->
               <div class="iconsblock__name">Новейшие станции дозации <br>
@@ -134,7 +149,8 @@
             </div><!-- /.iconsblock__icon -->
           </div><!-- /.iconsblock__one -->
         </div><!-- /.iconsblock__item -->
-        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="2s">
+        <div class="iconsblock__item iconsblock__item_default  animate__animated animate__fadeInUp wow"
+          data-wow-delay="2s">
           <div class="iconsblock__one">
             <div class="iconsblock__icon">
               <div class="iconsblock__image">
@@ -146,12 +162,14 @@
             </div><!-- /.iconsblock__icon -->
           </div><!-- /.iconsblock__one -->
         </div><!-- /.iconsblock__item -->
-        <div class="iconsblock__item animate__animated animate__fadeInUp wow" data-wow-delay="2.5s">
+        <div class="iconsblock__item iconsblock__item_primary animate__animated animate__fadeInUp wow"
+          data-wow-delay="2.5s">
           <div class="iconsblock__one">
             <div class="iconsblock__icon">
               <div class="iconsblock__image">
                 <div class="iconsblock__img">
-                  <img src="img/iconsblock3.svg" alt="">
+                  <img src="img/iconsblock3.svg" alt="" class='iconsblock__mainicon'>
+                  <img src="img/iconsblock3_after.svg" alt="" class='iconsblock__number'>
                 </div>
               </div><!-- /.iconsblock__image -->
               <div class="iconsblock__name">Ультрафилетовые установки <br>
@@ -280,7 +298,7 @@
   </div><!-- /.container -->
 </div><!-- /.fitcheblock -->
 
-<div class="priceblock">
+<div class="priceblock" id='price'>
   <div class="container">
     <div class="colstitle">
       <div class="colstitle__col">
@@ -301,7 +319,9 @@
                 <div class="pricing__title">Первое занятие</div>
                 <div class="pricing__text">Только при 100% предоплате</div>
                 <div class="pricing__price">900 ₽</div>
-                <div class="pricing__button"><a href="" class="button button_type2">Записаться</a></div>
+                <div class="pricing__button"><a target="_blank"
+                    href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                    class="button button_type2">Записаться</a></div>
               </div><!-- /.pricing__wrapper -->
             </div><!-- /.pricing__one -->
           </div><!-- /.pricing__item -->
@@ -311,7 +331,9 @@
                 <div class="pricing__title">Абонемент на 4 занятия</div>
                 <div class="pricing__text">Срок действия 1 месяц</div>
                 <div class="pricing__price">6 800 ₽</div>
-                <div class="pricing__button"><a href="" class="button button_type2">Записаться</a></div>
+                <div class="pricing__button"><a target="_blank"
+                    href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                    class="button button_type2">Записаться</a></div>
               </div><!-- /.pricing__wrapper -->
             </div><!-- /.pricing__one -->
           </div><!-- /.pricing__item -->
@@ -321,7 +343,9 @@
                 <div class="pricing__title">Абонемент на 6 занятия</div>
                 <div class="pricing__text">Срок действия 1 месяц</div>
                 <div class="pricing__price">9 900 ₽</div>
-                <div class="pricing__button"><a href="" class="button button_type2">Записаться</a></div>
+                <div class="pricing__button"><a target="_blank"
+                    href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                    class="button button_type2">Записаться</a></div>
               </div><!-- /.pricing__wrapper -->
             </div><!-- /.pricing__one -->
           </div><!-- /.pricing__item -->
@@ -331,7 +355,9 @@
                 <div class="pricing__title">Абонемент на 8 занятия</div>
                 <div class="pricing__text">Срок действия 1 месяц</div>
                 <div class="pricing__price">12 800 ₽</div>
-                <div class="pricing__button"><a href="" class="button button_type2">Записаться</a></div>
+                <div class="pricing__button"><a target="_blank"
+                    href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                    class="button button_type2">Записаться</a></div>
               </div><!-- /.pricing__wrapper -->
             </div><!-- /.pricing__one -->
           </div><!-- /.pricing__item -->
@@ -341,7 +367,9 @@
                 <div class="pricing__title">Абонемент на 12 занятия</div>
                 <div class="pricing__text">Срок действия 1 месяц</div>
                 <div class="pricing__price">18 000 ₽</div>
-                <div class="pricing__button"><a href="" class="button button_type2">Записаться</a></div>
+                <div class="pricing__button"><a target="_blank"
+                    href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                    class="button button_type2">Записаться</a></div>
               </div><!-- /.pricing__wrapper -->
             </div><!-- /.pricing__one -->
           </div><!-- /.pricing__item -->
@@ -351,7 +379,9 @@
                 <div class="pricing__title">Абонемент на 24 занятия</div>
                 <div class="pricing__text">Срок действия 1 месяц</div>
                 <div class="pricing__price">32 400 ₽</div>
-                <div class="pricing__button"><a href="" class="button button_type2">Записаться</a></div>
+                <div class="pricing__button"><a target="_blank"
+                    href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                    class="button button_type2">Записаться</a></div>
               </div><!-- /.pricing__wrapper -->
             </div><!-- /.pricing__one -->
           </div><!-- /.pricing__item -->
@@ -361,7 +391,9 @@
                 <div class="pricing__title">Абонемент на 50 занятий</div>
                 <div class="pricing__text">Срок действия 1 месяц</div>
                 <div class="pricing__price">65 000 ₽</div>
-                <div class="pricing__button"><a href="" class="button button_type2">Записаться</a></div>
+                <div class="pricing__button"><a target="_blank"
+                    href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                    class="button button_type2">Записаться</a></div>
               </div><!-- /.pricing__wrapper -->
             </div><!-- /.pricing__one -->
           </div><!-- /.pricing__item -->
@@ -381,7 +413,9 @@
               <span>БЕСПЛАТНО</span>
             </div>
             <div class="promo__button">
-              <a href="" class='buttongift'>
+              <a target="_blank"
+                href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                class='buttongift'>
                 <span class="buttongift__text">Записаться на пробное занятие</span>
                 <span class="buttongift__icon"><img src="img/gift.svg" alt=""></span>
               </a></div><!-- /.promo__button -->
@@ -398,7 +432,7 @@
   </div><!-- /.container -->
 </div><!-- /.promo -->
 
-<div class="teamblock">
+<div class="teamblock" id='team'>
   <div class="container">
     <div class="colstitle">
       <div class="colstitle__col">
@@ -524,7 +558,7 @@
 </div><!-- /.teamblock -->
 
 
-<div class="reviewblock">
+<div class="reviewblock" id='review'>
   <div class="container">
     <div class="colstitle">
       <div class="colstitle__col">
@@ -761,7 +795,7 @@
 </div><!-- /.gallery -->
 
 
-<div class="faqblock">
+<div class="faqblock" id='faq'>
   <div class="container">
     <div class="colstitle">
       <div class="colstitle__col">
@@ -834,7 +868,7 @@
 </div><!-- /.faq -->
 
 
-<div class="contacts">
+<div class="contacts" id='contact'>
   <div class="container">
     <div class="contacts__items">
       <div class="contacts__item contacts__item_left">
@@ -852,7 +886,9 @@
             </div><!-- /.contactitem__icon -->
             <div class="contactitem__content">
               <a href="tel:+79858664447" class="phonetel">+7 (985) 866 44 47</a><!-- /.phonetel -->
-              <a href="" class="callbacklink">Получить консультацию</a><!-- /.callbacklink -->
+              <a target="_blank"
+                href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!"
+                class="callbacklink link_blue">Получить консультацию</a><!-- /.callbacklink -->
             </div><!-- /.contactitem__content -->
           </div><!-- /.contactitem -->
           <div class="contactitem">
@@ -884,7 +920,7 @@
               <div class="contactitem__img"><img src="img/Mail.svg" alt=""></div><!-- /.contactitem__img -->
             </div><!-- /.contactitem__icon -->
             <div class="contactitem__content">
-              <a href="mailto:zapis@aqua-magic.ru" class="contacitem__text">
+              <a href="mailto:zapis@aqua-magic.ru" class="contacitem__text link_blue">
                 zapis@aqua-magic.ru
               </a><!-- /.contacitem__text -->
 
@@ -947,8 +983,11 @@
           </div><!-- /.footer__col -->
           <div class="footer__col">
             <div class="footer__links">
-              <div class="footer__link"><a href="#privacy" data-toggle='modal'>Пользовательское соглашение</a></div>
-              <div class="footer__link"><a href="//empis.ru" target='_blank'>Создание сайта - EMPIS</a></div>
+              <div class="footer__link"><a href="#modal_privacy" data-toggle='modal' class=''>Пользовательское
+                  соглашение</a>
+              </div>
+              <div class="footer__link"><a href="//empis.ru" target='_blank' class=''>Создание сайта -
+                  EMPIS</a></div>
             </div><!-- /.footer__links -->
           </div><!-- /.footer__col -->
         </div><!-- /.footer__cols -->
@@ -956,61 +995,79 @@
     </div>
 
   </footer>
+  <a href="#top" class="totop scrollTo"><img src="img/totop.svg" alt=""></a><!-- /.totop -->
 </section>
 </div><!-- /#fullpage-->
 
-<div id="modal__callback" class="modal modalform fade" tabindex='-1'>
+<div id="modal_privacy" class="modal modalform fade" tabindex='-1'>
   <div class="modal-dialog">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><svg width="32" height="32"
-        viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M24.9428 8.94281L25.8856 8L24 6.11438L23.0572 7.05719L24.9428 8.94281ZM7.05719 23.0572L6.11438 24L8 25.8856L8.94281 24.9428L7.05719 23.0572ZM23.0572 7.05719L15.0572 15.0572L16.9428 16.9428L24.9428 8.94281L23.0572 7.05719ZM15.0572 15.0572L7.05719 23.0572L8.94281 24.9428L16.9428 16.9428L15.0572 15.0572Z"
-          fill="#8B8B8B" />
-        <path
-          d="M8.94281 7.05719L8 6.11438L6.11438 8L7.05719 8.94281L8.94281 7.05719ZM23.0572 24.9428L24 25.8856L25.8856 24L24.9428 23.0572L23.0572 24.9428ZM7.05719 8.94281L23.0572 24.9428L24.9428 23.0572L8.94281 7.05719L7.05719 8.94281Z"
-          fill="#8B8B8B" />
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+          d="M4.32959 7L0 2.67041L2.67041 0L7 4.32959L11.3296 0L14 2.67041L9.67041 7L14 11.3296L11.3296 14L7 9.67041L2.67041 14L0 11.3296L4.32959 7Z"
+          fill="#29395B" />
       </svg>
+
     </button>
     <div class="modal-content">
       <div class="modal-body">
-        <div class="modal__bg">
 
-        </div>
         <div class="modal__content">
-          <div class="form">
-            <div class="form__title">Оставьте свои контакты</div>
-            <div class="form__text">HR специалист свяжется с&nbsp;подходящими кандидатами</div>
-            <div class="form__form">
-              <form action="">
-                <div class="form__inputs">
-                  <div class="form__input">
-                    <input type='text' placeholder="Имя">
 
-                    <!-- <input placeholder="Имя" value="заполнен успешно" class="input-complete"> -->
-
-                    <!-- <input placeholder="Имя" value="заполнен с ошибкой" class="input-error"> -->
-                    <!-- <span class="form__error">Заполните поле</span> -->
-                  </div>
-                  <div class="form__input">
-                    <input type='tel' placeholder="Телефон">
-                  </div>
-                  <div class="form__input">
-                    <input type='text' placeholder="Ссылка на резюме">
-                  </div>
+          <div class="text textlimit">
+            <div class="colstitle">
+              <div class="colstitle__col">
+                <div class="imgtitle imgtitle_h2 colstitle__title imgtitle_small">
+                  <h2>Пользовательское соглашение</h2>
                 </div>
+              </div><!-- /.colstitle__col -->
+            </div><!-- /.colstitle -->
+            <p>
+              Задача организации, в особенности же сложившаяся структура организации способствует подготовки и
+              реализации
+              позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что
+              рамки
+              и место обучения кадров играет важную роль в формировании соответствующий условий активизации. Задача
+              организации, в особенности же дальнейшее развитие различных форм деятельности позволяет оценить значение
+              модели развития. С другой стороны постоянный количественный рост и сфера нашей активности в значительной
+              степени обуславливает создание модели развития.
+            </p>
+            <p>Разнообразный и богатый опыт сложившаяся структура организации требуют от нас анализа направлений
+              прогрессивного развития. Задача организации, в особенности же постоянное информационно-пропагандистское
+              обеспечение нашей деятельности представляет собой интересный эксперимент проверки систем массового
+              участия.
+              Задача организации, в особенности же укрепление и развитие структуры требуют от нас анализа направлений
+              прогрессивного развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры
+              представляет собой интересный эксперимент проверки направлений прогрессивного развития.
+            </p>
+            <p>Идейные соображения высшего порядка, а также сложившаяся структура организации влечет за собой процесс
+              внедрения и модернизации модели развития. Товарищи! начало повседневной работы по формированию позиции
+              представляет собой интересный эксперимент проверки форм развития. Не следует, однако забывать, что
+              постоянный количественный рост и сфера нашей активности требуют определения и уточнения направлений
+              прогрессивного развития. Задача организации, в особенности же постоянный количественный рост и сфера
+              нашей
+              активности способствует подготовки и реализации существенных финансовых и административных условий.
+              Равным
+              образом начало повседневной работы по формированию позиции способствует подготовки и реализации
+              направлений
+              прогрессивного развития. Задача организации, в особенности же новая модель организационной деятельности
+              играет важную роль в формировании дальнейших направлений развития.
+            </p>
+            <p> Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует
+              подготовки и
+              реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что
+              консультация с
+              широким активом в значительной степени обуславливает создание системы обучения кадров, соответствует
+              насущным потребностям. Значимость этих проблем настолько очевидна, что реализация намеченных плановых
+              заданий представляет собой интересный эксперимент проверки системы обучения кадров, соответствует
+              насущным
+              потребностям. Товарищи! реализация намеченных плановых заданий играет важную роль в формировании
+              модели
+              развития.</p>
+            <br><br><br><br> <br><br><br><br>
+          </div><!-- /.text -->
 
-                <div class="form__buttons">
-                  <div class="form__submit"><button class="btn btn_dark btn_link">
-                      <span>Отправить</span>
-                    </button></div>
-                  <div class="form__message">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#"
-                      target='_blank'>Политикой
-                      конфиденциальности</a></div>
 
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1024,6 +1081,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js">
+</script>
 <script src="js/bundle.js"></script>
 
 

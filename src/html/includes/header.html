@@ -1,28 +1,37 @@
 <header id="header" class="header">
-  <div class="container">
+  <div class="container" id='top'>
     <div class="header__wrapper">
       <div class="header__row">
         <div class="header__item">
           <div class="header__logo"><img src="img/logo.svg" alt=""></div>
         </div><!-- /.header__item -->
-        <div class="header__item">
+        <div class="header__item header__item_mobile">
+          <div class="menu js-menu">
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+          </div>
+        </div><!-- /.header__item -->
+        <div class="header__item desktop">
           <div class="header__menu">
             <div class="mainmenu">
               <ul>
-                <li><a href="">О нас</a></li>
-                <li><a href="">Услуги и цены</a></li>
-                <li><a href="">Специалисты</a></li>
-                <li><a href="">Отзывы</a></li>
-                <li><a href="">Вопрос-ответ</a></li>
-                <li><a href="">Контакты</a></li>
+                <li><a href="#about" class='scrollTo'>О нас</a></li>
+                <li><a href="#price" class='scrollTo'>Услуги и цены</a></li>
+                <li><a href="#team" class='scrollTo'>Специалисты</a></li>
+                <li><a href="#review" class='scrollTo'>Отзывы</a></li>
+                <li><a href="#faq" class='scrollTo'>Вопрос-ответ</a></li>
+                <li><a href="#contact" class='scrollTo'>Контакты</a></li>
               </ul>
             </div><!-- /.mainmenu -->
           </div><!-- /.header__menu -->
         </div><!-- /.header__item -->
-        <div class="header__item">
+        <div class="header__item desktop">
           <div class="header__phone">
-            <div class="phone"><a href="tel:879858664447">+7 985 866 44 47</a></div><!-- /.phone -->
-            <div class="callback"><a href="#">Получить консультацию</a></div><!-- /.callback -->
+            <div class="phone"><a href="tel:879858664447" class='link-white'>+7 985 866 44 47</a></div><!-- /.phone -->
+            <div class="callback link-white"><a target="_blank"
+                href="//api.whatsapp.com/send?phone=79858664447&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20Aqua%20Magic%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D1%8F!">Получить
+                консультацию</a></div><!-- /.callback -->
           </div><!-- /.header__phone -->
         </div><!-- /.header__item -->
       </div><!-- /.header__row -->
